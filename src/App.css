@@ -1,7 +1,7 @@
 body {
   background-color: #9933ff; /* 2 */
   text-align: left; /* 3 */
-  font-family: OpenSans;
+  font-family: "OpenSans";
 }
 
 h1 {
@@ -22,21 +22,24 @@ h3 {
 
 /* fuentes */
 @font-face {
-  font-family: "Light"; /*Can be any text*/
-  src: local("OpenSans"), url("./font/OpenSans-Light.ttf") format("truetype");
+  font-family: "OpenSans"; /*Can be any text*/
+  src: url("./font/OpenSans-Light.ttf") format("truetype");
+  font-weight: light;
 }
 @font-face {
-  font-family: "Regular"; /*Can be any text*/
-  src: local("OpenSans"), url("./font/OpenSans-Regular.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Bold"; /*Can be any text*/
-  src: local("OpenSans"), url("./font/OpenSans-Bold.ttf") format("truetype");
+  font-family: "OpenSans"; /*Can be any text*/
+  src: url("./font/OpenSans-Regular.ttf") format("truetype");
+  font-weight: normal;
 }
 
 @font-face {
-  font-family: "ExtraBold"; /*Can be any text*/
-  src: local("OpenSans"),
-    url("./font/OpenSans-ExtraBold.ttf") format("truetype");
+  font-family: "OpenSans"; /*Can be any text*/
+  src: url("./font/OpenSans-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "OpenSans"; /*Can be any text*/
+  src: url("./font/OpenSans-ExtraBold.ttf") format("truetype");
+  font-weight: bolder;
 }
