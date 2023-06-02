@@ -1,5 +1,32 @@
+
 :root {
-  /* ## TODO: Get styles from figma */
+  /* ## TODO: Get styles from figma 
+  https://www.figma.com/file/yS20gyYfFWAFsYKXzIKKHb/Sistema-de-dise%C3%B1o---Guifaffinity-(Copy)?type=design&node-id=77-90&t=WKFhFXkBTnvf6nBm-0
+  */
+
+  @font-face {
+    font-family: "Light";   /*Can be any text*/
+    src: local("OpenSans"),
+      url("./font/OpenSans-Light.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "Regular";   /*Can be any text*/
+    src: local("OpenSans"),
+      url("./font/OpenSans-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Bold";   /*Can be any text*/
+    src: local("OpenSans"),
+      url("./font/OpenSans-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "ExtraBold";   /*Can be any text*/
+    src: local("OpenSans"),
+      url("./font/OpenSans-ExtraBold.ttf") format("truetype");
+  }
+
   --background-color: #f7f7f7;
   --white: #fff;
   --light-gray: #e0e0e0;
@@ -22,4 +49,33 @@
   --font-medium-line-height: 16px;
   --font-large-size: 24px;
   --font-large-line-height: 32px;
+
+/* desde el figma */
+--color-Purple: #9933FF
+--color-LightRed: #FF6666
+--color-LightBlue: #00CCFF
+--color-LightGreen: #00FF99
+--color-LightYellow: #FFF9AA
+--color-Blue: #4158D0
+--color-Pink: #C850C0
+--color-Yellow: #FFCC70
+--color-Black: #000000
+--color-Grey: #999999
+--color-White: #FFFFFF
+
+
+Tipografía y tamaños
+Open Sans / Light / Bold / ExtraBold
+Open Sans - 12.64px / 17 - Small
+Open Sans - 16px / 22 - Base
+Open Sans - 18px / 25 - H4
+Open Sans - 25.63 / 35 - H3
+Open Sans - 36.41px / 50 - H2
+Open Sans - 41.83px / 57 - H1
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap');
+
+
+
+
 }
