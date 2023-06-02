@@ -1,0 +1,25 @@
+:root {
+  /* ## TODO: Get styles from figma */
+  --background-color: #f7f7f7;
+  --white: #fff;
+  --light-gray: #e0e0e0;
+  --medium-gray: #666666;
+  --dark-gray: #212121;
+
+  --xtiny: 4px;
+  --tiny: 8px;
+  --small: 12px;
+  --mini: 16px;
+  --base: 24px;
+  --medium: 32px;
+  --large: 48px;
+
+  --font-tiny-size: 10px;
+  --font-tiny-line-height: 16px;
+  --font-small-size: 12px;
+  --font-small-line-height: 16px;
+  --font-medium-size: 14px;
+  --font-medium-line-height: 16px;
+  --font-large-size: 24px;
+  --font-large-line-height: 32px;
+}
