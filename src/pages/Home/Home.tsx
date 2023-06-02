@@ -1,4 +1,4 @@
-import "./styles.css"
+import "./styles.css";
 
 export const Home = () => {
   return (
@@ -12,5 +12,5 @@ export const Home = () => {
       </main>
       <footer>Guifaffinity</footer>
     </>
-  )
-}
+  );
+};
