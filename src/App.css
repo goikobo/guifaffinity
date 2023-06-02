@@ -23,23 +23,23 @@ h3 {
 /* fuentes */
 @font-face {
   font-family: "OpenSans"; /*Can be any text*/
-  src: url("./font/OpenSans-Light.ttf") format("truetype");
+  src: url("./fonts/open_sans/OpenSans-Light.ttf") format("truetype");
   font-weight: light;
 }
 @font-face {
   font-family: "OpenSans"; /*Can be any text*/
-  src: url("./font/OpenSans-Regular.ttf") format("truetype");
+  src: url("./fonts/open_sans/OpenSans-Regular.ttf") format("truetype");
   font-weight: normal;
 }
 
 @font-face {
   font-family: "OpenSans"; /*Can be any text*/
-  src: url("./font/OpenSans-Bold.ttf") format("truetype");
+  src: url("./fonts/open_sans/OpenSans-Bold.ttf") format("truetype");
   font-weight: bold;
 }
 
 @font-face {
   font-family: "OpenSans"; /*Can be any text*/
-  src: url("./font/OpenSans-ExtraBold.ttf") format("truetype");
+  src: url("./fonts/open_sans/OpenSans-ExtraBold.ttf") format("truetype");
   font-weight: bolder;
 }
