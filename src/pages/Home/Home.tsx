@@ -1,35 +1,20 @@
-import "./styles.css";
+import useTrending from "../../hooks/useTrending"
+import "./styles.css"
 
 export const Home = () => {
+  const { trendingGifs, loading } = useTrending()
+
+  if (loading || !trendingGifs) return <div>Cargando...</div>
+
   return (
     <>
       <header>Guifaffinity</header>
       <main>
-        <img
-          src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g"
-          alt="gatitos locos"
-        />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
-        <img src="https://media1.giphy.com/media/UOsYvXGW1UFlS/giphy.gif?cid=ecf05e47c5avk3rlidaqt7zce2rl6u99kgd2hx9lknvjqhm4&ep=v1_gifs_search&rid=giphy.gif&ct=g" />
+        {trendingGifs.map((trendingGif) => (
+          <img src={trendingGif.src} alt={trendingGif.title} />
+        ))}
       </main>
       <footer>Guifaffinity</footer>
     </>
-  );
-};
+  )
+}
