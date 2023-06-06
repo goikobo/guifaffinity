@@ -1,10 +1,12 @@
+import { FC } from "react"
 import useTrending from "../../hooks/useTrending"
 import "./styles.css"
 
-export const Home = () => {
-  const { trendingGifs, loading } = useTrending()
+export const Home: FC = () => {
+  const { trendingGifs } = useTrending()
 
-  if (loading || !trendingGifs) return <div>Cargando...</div>
+  const isLoading = trendingGifs === undefined
+  if (isLoading) return <div>Cargando...</div>
 
   return (
     <>

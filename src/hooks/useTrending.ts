@@ -3,18 +3,16 @@ import { Gif } from "../interfaces/Gif"
 import { getTrendingGifs } from "../services/getTrendingGifs"
 
 const useTrending = () => {
-  const [trendingGifs, setTrendingGifs] = useState<Gif[]>()
-  const [loading, setLoading] = useState<boolean>(false)
+  const [trendingGifs, setTrendingGifs] = useState<Gif[] | undefined>(undefined)
 
   useEffect(() => {
-    console.log("Call")
-    getTrendingGifs().then((data) => {
-      console.log({ data, result: data.result })
+    const OnLoad = async () => {
+      const data = await getTrendingGifs()
       setTrendingGifs(data.result)
-      setLoading(false)
-    })
+    }
+    OnLoad()
   }, [])
 
-  return { trendingGifs, loading }
+  return { trendingGifs }
 }
 export default useTrending
