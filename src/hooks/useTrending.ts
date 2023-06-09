@@ -8,11 +8,12 @@ const useTrending = () => {
   useEffect(() => {
     const OnLoad = async () => {
       const data = await getTrendingGifs()
-      setTrendingGifs(data.result)
+      setTrendingGifs(data)
     }
     OnLoad()
   }, [])
 
   return { trendingGifs }
 }
+
 export default useTrending
