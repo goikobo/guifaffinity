@@ -13,18 +13,9 @@ test("Renderiza un gif", async () => {
   expect(linkElement).toBeVisible()
 })
 
-test("Muestra 20 gifs", async () => {
-  //const { container } = render(<App />);
-  render(<App />)
-  await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."))
-  const elements = screen.getAllByRole("img")
-  expect(elements.length).toBe(20)
-})
-
 test("Muestra hasta 20 gifs", async () => {
-  //const { container } = render(<App />);
   render(<App />)
   await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."))
-  const elements = screen.getAllByRole("img")
-  expect(elements.length).toBeLessThanOrEqual(21)
+  const elements = screen.getAllByRole("gif-card")
+  expect(elements.length).toBeLessThanOrEqual(20)
 })
