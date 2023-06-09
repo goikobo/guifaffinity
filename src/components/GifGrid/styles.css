@@ -1,6 +1,17 @@
-.gif-grid {
+.gif-container .grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 33px;
   justify-content: space-around;
+  gap: 33px;
+}
+
+.gif-container .title img {
+  width: 40px;
+}
+
+.gif-container .title {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 2rem;
 }

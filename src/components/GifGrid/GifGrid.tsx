@@ -2,13 +2,20 @@ import { FC } from "react"
 import "./styles.css"
 import { Gif } from "../../interfaces/Gif"
 import { GifCard } from "../GifCard/GifCard"
+import arrowIcon from "../../res/icons/arrow.png"
 
 export const GifGrid: FC<{ gifs: Gif[] }> = ({ gifs }) => {
   return (
-    <section className="gif-grid">
-      {gifs.map((trendingGif) => (
-        <GifCard key={trendingGif.id} trendingGif={trendingGif} />
-      ))}
+    <section className="gif-container">
+      <header className="title">
+        <img src={arrowIcon} alt="Arrow Icon" />
+        <h2>Los guif más trendings del momento</h2>
+      </header>
+      <main className="grid">
+        {gifs.map((trendingGif) => (
+          <GifCard key={trendingGif.id} trendingGif={trendingGif} />
+        ))}
+      </main>
     </section>
   )
 }
