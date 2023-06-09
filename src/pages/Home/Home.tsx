@@ -1,7 +1,7 @@
 import { FC } from "react"
 import useTrending from "../../hooks/useTrending"
 import "./styles.css"
-import { GifCard } from "../../components/GifCard/GifCard"
+import { GifGrid } from "../../components/GifGrid/GifGrid"
 
 export const Home: FC = () => {
   const { trendingGifs } = useTrending()
@@ -13,9 +13,7 @@ export const Home: FC = () => {
     <>
       <header>Guifaffinity</header>
       <main>
-        {trendingGifs.map((trendingGif) => (
-          <GifCard key={trendingGif.id} trendingGif={trendingGif} />
-        ))}
+        <GifGrid gifs={trendingGifs} />
       </main>
       <footer>Guifaffinity</footer>
     </>
