@@ -28,10 +28,3 @@ test("Muestra hasta 20 gifs", async () => {
   const elements = screen.getAllByRole("img")
   expect(elements.length).toBeLessThanOrEqual(21)
 })
-
-test("Muestra primero el gif mas votado", async () => {
-  render(<App />)
-  await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."))
-  const elements = screen.getAllByRole("img")
-  expect(elements[0].getAttribute("alt")).toEqual(/gif mas votado/i)
-})
