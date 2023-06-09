@@ -1,0 +1,8 @@
+.gif-card {
+  border-radius: 10px;
+  width: 200px;
+}
+
+.gif-card .image {
+  border-radius: inherit;
+}
