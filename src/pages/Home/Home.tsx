@@ -3,6 +3,7 @@ import useTrending from "../../hooks/useTrending";
 import "./styles.css";
 import { GifGrid } from "../../components/GifGrid/GifGrid";
 import { SearchBar } from "../../components/SearchBar/SearchBar";
+import { Title } from "../../components/Title/Title";
 
 export const Home: FC = () => {
   const { trendingGifs } = useTrending();
@@ -12,7 +13,9 @@ export const Home: FC = () => {
 
   return (
     <>
-      <header>Guifaffinity</header>
+      <header>
+        <Title />
+      </header>
       <main>
         <SearchBar />
         <GifGrid gifs={trendingGifs} />
