@@ -49,3 +49,10 @@ test("Muestra texto de busqueda", async () => {
   );
   expect(elements).toBeVisible();
 });
+
+test("Muestra icono en el titulo", async () => {
+  render(<App />);
+  await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."));
+  const elements = screen.getByAltText("Guifaffinity-icon");
+  expect(elements).toBeVisible();
+});
