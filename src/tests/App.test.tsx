@@ -19,3 +19,10 @@ test("Muestra hasta 20 gifs", async () => {
   const elements = screen.getAllByTestId("gif-card")
   expect(elements.length).toBeLessThanOrEqual(20)
 })
+
+test("Muestra mensaje de trendings", async () => {
+  render(<App />)
+  await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."))
+  const elements = screen.getByText("Los guif más trendings del momento")
+  expect(elements).toBeVisible()
+})
