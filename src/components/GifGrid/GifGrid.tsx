@@ -1,8 +1,8 @@
-import { FC } from "react"
-import "./styles.css"
-import { Gif } from "../../interfaces/Gif"
-import { GifCard } from "../GifCard/GifCard"
-import arrowIcon from "../../res/icons/arrow.png"
+import { FC } from "react";
+import "./styles.css";
+import { Gif } from "../../interfaces/Gif";
+import { GifCard } from "../GifCard/GifCard";
+import arrowIcon from "../../res/icons/arrow.svg";
 
 export const GifGrid: FC<{ gifs: Gif[] }> = ({ gifs }) => {
   return (
@@ -17,5 +17,5 @@ export const GifGrid: FC<{ gifs: Gif[] }> = ({ gifs }) => {
         ))}
       </main>
     </section>
-  )
-}
+  );
+};
