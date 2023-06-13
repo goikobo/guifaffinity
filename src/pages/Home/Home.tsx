@@ -20,7 +20,7 @@ export const Home: FC = () => {
         <SearchBar />
         <GifGrid gifs={trendingGifs} />
       </main>
-      <footer>Guifaffinity</footer>
+      <footer></footer>
     </>
   );
 };

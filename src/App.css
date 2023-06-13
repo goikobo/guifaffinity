@@ -1,7 +1,13 @@
 body {
-  background-color: #9933ff; /* 2 */
+  background: linear-gradient(
+    157.9deg,
+    #4158d0 1.21%,
+    rgba(200, 80, 192, 0.46) 49.58%,
+    rgba(255, 204, 112, 0.58) 96.91%
+  );
   text-align: left; /* 3 */
   font-family: "OpenSans";
+  margin: 0 7%;
 }
 
 h1 {
