@@ -16,6 +16,6 @@ test("Renderiza un gif", async () => {
 test("Muestra hasta 20 gifs", async () => {
   render(<App />)
   await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."))
-  const elements = screen.getAllByRole("gif-card")
+  const elements = screen.getAllByTestId("gif-card")
   expect(elements.length).toBeLessThanOrEqual(20)
 })
