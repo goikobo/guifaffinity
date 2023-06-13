@@ -2,7 +2,7 @@ import { FC } from "react";
 import useTrending from "../../hooks/useTrending";
 import "./styles.css";
 import { GifGrid } from "../../components/GifGrid/GifGrid";
-import searchIcon from "../../res/icons/search.svg";
+import { SearchBar } from "../../components/SearchBar/SearchBar";
 
 export const Home: FC = () => {
   const { trendingGifs } = useTrending();
@@ -14,10 +14,7 @@ export const Home: FC = () => {
     <>
       <header>Guifaffinity</header>
       <main>
-        <section>
-          <input placeholder="¿Que quieres buscar? ¡Encuentralo!" />
-          <img src={searchIcon} alt="Search Icon" />
-        </section>
+        <SearchBar />
         <GifGrid gifs={trendingGifs} />
       </main>
       <footer>Guifaffinity</footer>
