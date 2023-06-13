@@ -26,3 +26,10 @@ test("Muestra mensaje de trendings", async () => {
   const elements = screen.getByText("Los guif más trendings del momento")
   expect(elements).toBeVisible()
 })
+
+test("Muestra icono de trendings", async () => {
+  render(<App />)
+  await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."))
+  const elements = screen.getByAltText("Arrow Icon")
+  expect(elements).toBeVisible()
+})
