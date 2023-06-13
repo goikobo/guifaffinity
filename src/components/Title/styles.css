@@ -2,36 +2,12 @@
   display: flex;
   width: 100%;
   height: 70px;
-}
-
-.title-container input {
-  width: calc(100% - 70px);
-  border-radius: 15px 0 0 15px;
-  border: 0;
-  outline: none;
-  padding: 24px 16px;
-  font-size: 18px;
-}
-
-.title-container input::placeholder {
-  color: var(--color-Grey);
-}
-
-.title-container button {
-  width: 70px;
-  height: 70px;
-  border-radius: 0 15px 15px 0;
-  border: 0;
-  background: linear-gradient(
-      135deg,
-      rgba(255, 243, 92, 0.77) 0%,
-      rgba(0, 204, 255, 0.46) 51.04%,
-      rgba(0, 255, 153, 0.37) 100%
-    ),
-    #c4c4c4;
+  align-items: center;
+  gap: 10px;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
 }
 
 .title-icon {
-  width: 50px;
-  height: 50px;
+  width: 56px;
 }
