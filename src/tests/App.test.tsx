@@ -37,6 +37,8 @@ test("Muestra icono de trendings", async () => {
 test("Muestra texto de busqueda", async () => {
   render(<App />);
   await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."));
-  const elements = screen.getByText("¿Que quieres buscar? ¡Encuentralo!");
+  const elements = screen.getByPlaceholderText(
+    "¿Que quieres buscar? ¡Encuentralo!"
+  );
   expect(elements).toBeVisible();
 });
