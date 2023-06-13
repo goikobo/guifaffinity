@@ -34,6 +34,13 @@ test("Muestra icono de trendings", async () => {
   expect(elements).toBeVisible();
 });
 
+test("Muestra icono de busqueda", async () => {
+  render(<App />);
+  await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."));
+  const elements = screen.getByAltText("Search Icon");
+  expect(elements).toBeVisible();
+});
+
 test("Muestra texto de busqueda", async () => {
   render(<App />);
   await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."));
