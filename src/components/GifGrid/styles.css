@@ -1,7 +1,7 @@
 .gif-container .grid {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
   gap: 32px;
   justify-content: space-around;
 }
