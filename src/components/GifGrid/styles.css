@@ -1,8 +1,8 @@
 .gif-container .grid {
   display: grid;
   width: 100%;
-  grid-template-columns: repeat(auto-fit, minmax(333px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(var(--guif-box-side), 1fr));
+  gap: var(--guif-box-gap);
   justify-content: space-around;
 }
 

@@ -26,4 +26,7 @@
   --color-Black: #000000;
   --color-Grey: #999999;
   --color-White: #ffffff;
+
+  --guif-box-side: 21rem;
+  --guif-box-gap: 2rem;
 }
