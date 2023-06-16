@@ -1,7 +1,16 @@
 export interface Gif {
-  id: number
-  title: string
-  src: string
-  votes: number
-  comments: string[]
+  id: string;
+  title: string;
+  src: {
+    original: string;
+    small: string;
+  };
+  votes: number;
+  comments: string[];
+  tags: string[];
+  user: {
+    username: string;
+    display_name: string;
+    is_verified: boolean;
+  };
 }
