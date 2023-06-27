@@ -1,15 +1,15 @@
-import { FC } from "react";
-import useTrending from "../../hooks/useTrending";
-import "./styles.css";
-import { GifGrid } from "../../components/GifGrid/GifGrid";
-import { SearchBar } from "../../components/SearchBar/SearchBar";
-import { Title } from "../../components/Title/Title";
+import { FC } from "react"
+import useTrending from "../../hooks/useTrending"
+import "./styles.css"
+import { GifGrid } from "../../components/GifGrid/GifGrid"
+import { SearchBar } from "../../components/SearchBar/SearchBar"
+import { Title } from "../../components/Title/Title"
 
 export const Home: FC = () => {
-  const { trendingGifs } = useTrending();
+  const { gifs, searchText } = useTrending()
 
-  const isLoading = trendingGifs === undefined;
-  if (isLoading) return <div>Cargando...</div>;
+  const isLoading = gifs === undefined
+  if (isLoading) return <div>Cargando...</div>
 
   return (
     <>
@@ -17,10 +17,10 @@ export const Home: FC = () => {
         <Title />
       </header>
       <main>
-        <SearchBar />
-        <GifGrid gifs={trendingGifs} />
+        <SearchBar OnSearch={searchText} />
+        <GifGrid gifs={gifs} />
       </main>
       <footer></footer>
     </>
-  );
-};
+  )
+}

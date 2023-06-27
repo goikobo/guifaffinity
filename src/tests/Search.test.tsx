@@ -3,6 +3,7 @@ import {
   screen,
   waitForElementToBeRemoved,
   fireEvent,
+  findByAltText,
 } from "@testing-library/react"
 import App from "../App"
 
@@ -17,10 +18,11 @@ test("Search cats", async () => {
   const button = screen.getByAltText("Search Icon")
   fireEvent.click(button)
 
+  await screen.findByText("Cargando...")
   await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."))
 
   const elements = screen.getAllByTestId("gif-card")
   elements.forEach((element) => {
-    expect(element.getAttribute("aria-label")).toContain(/cat/i)
+    expect(element.getAttribute("aria-label")).toMatch(/cat/i)
   })
 })
