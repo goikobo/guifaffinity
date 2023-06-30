@@ -46,3 +46,22 @@ test("Search dogs", async () => {
     expect(element.getAttribute("aria-label")).toMatch(/dog/i)
   })
 })
+
+test("Search goiko -> no results found", async () => {
+  render(<App />)
+  await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."))
+  const input = screen.getByPlaceholderText(
+    "¿Que quieres buscar? ¡Encuentralo!"
+  )
+  fireEvent.change(input, { target: { value: "goiko" } })
+
+  const button = screen.getByAltText("Search Icon")
+  fireEvent.click(button)
+
+  await screen.findByText("Cargando...")
+  await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."))
+
+  const elements = screen.getAllByTestId("gif-card")
+  expect(elements).toHaveLength(0)
+  expect(screen.getByText("No se han encontrado gifs")).toBeVisible()
+})
