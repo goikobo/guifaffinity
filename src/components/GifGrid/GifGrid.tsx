@@ -1,10 +1,15 @@
-import { FC } from "react";
-import "./styles.css";
-import { Gif } from "../../interfaces/Gif";
-import { GifCard } from "../GifCard/GifCard";
-import arrowIcon from "../../res/icons/arrow.svg";
+import { FC } from "react"
+import "./styles.css"
+import { Gif } from "../../interfaces/Gif"
+import { GifCard } from "../GifCard/GifCard"
+import arrowIcon from "../../res/icons/arrow.svg"
 
-export const GifGrid: FC<{ gifs: Gif[] }> = ({ gifs }) => {
+export const GifGrid: FC<{ gifs: Gif[] | undefined }> = ({ gifs }) => {
+  const isLoading = gifs === undefined
+  if (isLoading) {
+    return <div>Cargando...</div>
+  }
+
   return (
     <section className="gif-container">
       <header className="title">
@@ -17,5 +22,5 @@ export const GifGrid: FC<{ gifs: Gif[] }> = ({ gifs }) => {
         ))}
       </main>
     </section>
-  );
-};
+  )
+}

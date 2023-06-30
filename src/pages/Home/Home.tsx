@@ -7,7 +7,6 @@ import { Title } from "../../components/Title/Title"
 
 export const Home: FC = () => {
   const { gifs, searchText } = useTrending()
-  const isLoading = gifs === undefined
 
   return (
     <>
@@ -16,8 +15,7 @@ export const Home: FC = () => {
       </header>
       <main>
         <SearchBar OnSearch={searchText} />
-        {isLoading && <div>Cargando...</div>}
-        {!isLoading && <GifGrid gifs={gifs} />}
+        <GifGrid gifs={gifs} />
       </main>
       <footer></footer>
     </>
