@@ -18,10 +18,9 @@ test("Search cats", async () => {
   const button = screen.getByAltText("Search Icon")
   fireEvent.click(button)
 
-  await screen.findByText("Cargando...")
-  await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."))
+  screen.getByText("Cargando...")
 
-  const elements = screen.getAllByTestId("gif-card")
+  const elements = await screen.findAllByTestId("gif-card")
   elements.forEach((element) => {
     expect(element.getAttribute("aria-label")).toMatch(/cat/i)
   })
@@ -38,10 +37,9 @@ test("Search dogs", async () => {
   const button = screen.getByAltText("Search Icon")
   fireEvent.click(button)
 
-  await screen.findByText("Cargando...")
-  await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."))
+  screen.getByText("Cargando...")
 
-  const elements = screen.getAllByTestId("gif-card")
+  const elements = await screen.findAllByTestId("gif-card")
   elements.forEach((element) => {
     expect(element.getAttribute("aria-label")).toMatch(/dog/i)
   })
@@ -58,10 +56,8 @@ test("Search goiko -> no results found", async () => {
   const button = screen.getByAltText("Search Icon")
   fireEvent.click(button)
 
-  await screen.findByText("Cargando...")
-  await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."))
+  screen.getByText("Cargando...")
 
-  const elements = screen.getAllByTestId("gif-card")
-  expect(elements).toHaveLength(0)
-  expect(screen.getByText("No se han encontrado gifs")).toBeVisible()
+  expect(await screen.findByText("No se han encontrado guifs")).toBeVisible()
+  expect(screen.queryByTestId("gif-card")).toBeNull()
 })
