@@ -3,7 +3,9 @@ import { Gif } from "../interfaces/Gif"
 
 export async function searchGif(searchedText: string): Promise<Gif[]> {
   const apiUrl = process.env.REACT_APP_API_URL
-  const url = `${apiUrl}/gifs/search?searchedText=${searchedText}&limit=50&offset=0`
+  const url = `${apiUrl}/gifs/search?searchedText=${encodeURIComponent(
+    searchedText
+  )}&limit=50&offset=0`
   const res = await fetch(url)
   console.log({ res })
   const data: GifDTO[] = await res.json()

@@ -44,6 +44,23 @@ test("Search dogs", async () => {
   })
 })
 
+test("Search by tag #funny", async () => {
+  render(<App />)
+  await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."))
+  const input = screen.getByPlaceholderText(
+    "¿Que quieres buscar? ¡Encuentralo!"
+  )
+  fireEvent.change(input, { target: { value: "#funny" } })
+
+  const button = screen.getByAltText("Search Icon")
+  fireEvent.click(button)
+
+  screen.getByText("Cargando...")
+
+  const elements = await screen.findAllByTestId("gif-card")
+  expect(elements).toHaveLength(14)
+})
+
 test("Search goiko -> no results found", async () => {
   render(<App />)
   await waitForElementToBeRemoved(() => screen.queryByText("Cargando..."))
