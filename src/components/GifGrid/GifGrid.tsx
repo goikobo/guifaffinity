@@ -10,6 +10,11 @@ export const GifGrid: FC<{ gifs: Gif[] | undefined }> = ({ gifs }) => {
     return <div>Cargando...</div>
   }
 
+  const hasAnyGifs = gifs.length > 0
+  if (!hasAnyGifs) {
+    return <div>No se han encontrado guifs</div>
+  }
+
   return (
     <section className="gif-container">
       <header className="title">

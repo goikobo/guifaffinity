@@ -1,12 +1,12 @@
 import { FC } from "react"
-import useTrending from "../../hooks/useTrending"
+import useGifs from "../../hooks/useGifs"
 import "./styles.css"
 import { GifGrid } from "../../components/GifGrid/GifGrid"
 import { SearchBar } from "../../components/SearchBar/SearchBar"
 import { Title } from "../../components/Title/Title"
 
 export const Home: FC = () => {
-  const { gifs, searchText } = useTrending()
+  const { gifs, searchText } = useGifs()
 
   return (
     <>

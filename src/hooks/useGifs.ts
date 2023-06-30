@@ -24,8 +24,10 @@ const useGifs = () => {
   }, [searchedText])
 
   function searchText(text: string) {
-    setGifs(undefined)
-    setSearchedText(text)
+    if (searchedText !== text) {
+      setGifs(undefined)
+      setSearchedText(text)
+    }
   }
 
   return { gifs, searchText }
