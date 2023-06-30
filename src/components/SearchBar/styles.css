@@ -9,7 +9,6 @@
   width: calc(100% - 70px);
   border-radius: 15px 0 0 15px;
   border: 0;
-  outline: none;
   padding: 24px 16px;
   font-size: 18px;
 }
@@ -30,6 +29,7 @@
       rgba(0, 255, 153, 0.37) 100%
     ),
     #c4c4c4;
+  cursor: pointer;
 }
 
 .search-icon {
