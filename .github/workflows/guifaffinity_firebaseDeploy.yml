@@ -1,4 +1,4 @@
-name: Firebase Auto Deploy
+name: Firebase Auto Deploy orig
 
 on: [workflow_dispatch]
 
