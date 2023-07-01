@@ -12,8 +12,8 @@ jobs:
         node-version: [14.x]
 
     steps:
-      - uses: actions/checkout@githubActions
-      - uses: actions/setup-node@githubActions
+      - uses: actions/checkout@origin/githubActions
+      - uses: actions/setup-node@origin/githubActions
         with:
           node-version: "14.x"
 
