@@ -1,4 +1,4 @@
-name: Firebase Auto Deploy 2h
+name: Firebase Manual Deploy
 
 on: workflow_dispatch
 jobs:
