@@ -21,12 +21,9 @@ jobs:
 
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
 
-      - name: Pass test
-        run: CI= npm CI
-
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
       - name: pasando test
-        run: npm test
+        run: CI = npm test
       - name: pasando la build
         run: npm run build
