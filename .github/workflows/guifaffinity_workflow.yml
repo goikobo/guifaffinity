@@ -24,6 +24,6 @@ jobs:
       - run: echo "🍏 This job's status is ${{ job.status }}."
 
       - name: pasando test
-        run: CI = npm test
+        run: npm test
       - name: pasando la build
         run: npm run build
