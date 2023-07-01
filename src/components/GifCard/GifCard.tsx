@@ -1,6 +1,6 @@
-import { FC } from "react"
-import "./styles.css"
-import { Gif } from "../../interfaces/Gif"
+import { FC } from "react";
+import "./styles.css";
+import { Gif } from "../../interfaces/Gif";
 
 export const GifCard: FC<{ trendingGif: Gif }> = ({ trendingGif }) => {
   return (
@@ -11,5 +11,5 @@ export const GifCard: FC<{ trendingGif: Gif }> = ({ trendingGif }) => {
     >
       <img className="image" src={trendingGif.src.small} alt="" />
     </article>
-  )
-}
+  );
+};

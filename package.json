@@ -21,7 +21,14 @@
     "start-api": "set \"REACT_APP_USE_REMOTE_API=true\" && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint-staged": "npx lint-staged"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint . --fix",
+      "prettier --write ."
+    ]
   },
   "eslintConfig": {
     "extends": [
@@ -42,7 +49,9 @@
     ]
   },
   "devDependencies": {
-    "msw": "^1.2.1"
+    "lint-staged": "^13.2.3",
+    "msw": "^1.2.1",
+    "prettier": "2.8.8"
   },
   "msw": {
     "workerDirectory": "public"

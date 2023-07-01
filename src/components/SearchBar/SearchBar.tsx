@@ -1,11 +1,11 @@
-import { FC, useState } from "react"
-import "./styles.css"
-import searchIcon from "../../res/icons/search.svg"
+import { FC, useState } from "react";
+import "./styles.css";
+import searchIcon from "../../res/icons/search.svg";
 
 export const SearchBar: FC<{ OnSearch: (text: string) => void }> = ({
   OnSearch,
 }) => {
-  const [searchedText, setSearchedTest] = useState<string>("")
+  const [searchedText, setSearchedTest] = useState<string>("");
   return (
     <section className="search-container">
       <input
@@ -17,5 +17,5 @@ export const SearchBar: FC<{ OnSearch: (text: string) => void }> = ({
         <img className="search-icon" src={searchIcon} alt="Search Icon" />
       </button>
     </section>
-  )
-}
+  );
+};

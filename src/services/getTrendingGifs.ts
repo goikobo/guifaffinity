@@ -1,12 +1,12 @@
-import { GifDTO } from "../interfaces/DTO/GifDTO"
-import { Gif } from "../interfaces/Gif"
+import { GifDTO } from "../interfaces/DTO/GifDTO";
+import { Gif } from "../interfaces/Gif";
 
 export async function getTrendingGifs(): Promise<Gif[]> {
-  const apiUrl = process.env.REACT_APP_API_URL
-  const url = `${apiUrl}/gifs?limit=50&offset=0`
-  const res = await fetch(url)
-  const data: GifDTO[] = await res.json()
-  return data.map(mapGuif)
+  const apiUrl = process.env.REACT_APP_API_URL;
+  const url = `${apiUrl}/gifs?limit=50&offset=0`;
+  const res = await fetch(url);
+  const data: GifDTO[] = await res.json();
+  return data.map(mapGuif);
 }
 
 const mapGuif = (gif: GifDTO): Gif => {
@@ -25,5 +25,5 @@ const mapGuif = (gif: GifDTO): Gif => {
       display_name: gif.user?.display_name || "",
       is_verified: gif.user?.is_verified || false,
     },
-  }
-}
+  };
+};

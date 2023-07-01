@@ -1,18 +1,18 @@
-import { FC } from "react"
-import "./styles.css"
-import { Gif } from "../../interfaces/Gif"
-import { GifCard } from "../GifCard/GifCard"
-import arrowIcon from "../../res/icons/arrow.svg"
+import { FC } from "react";
+import "./styles.css";
+import { Gif } from "../../interfaces/Gif";
+import { GifCard } from "../GifCard/GifCard";
+import arrowIcon from "../../res/icons/arrow.svg";
 
 export const GifGrid: FC<{ gifs: Gif[] | undefined }> = ({ gifs }) => {
-  const isLoading = gifs === undefined
+  const isLoading = gifs === undefined;
   if (isLoading) {
-    return <div>Cargando...</div>
+    return <div>Cargando...</div>;
   }
 
-  const hasAnyGifs = gifs.length > 0
+  const hasAnyGifs = gifs.length > 0;
   if (!hasAnyGifs) {
-    return <div>No se han encontrado guifs</div>
+    return <div>No se han encontrado guifs</div>;
   }
 
   return (
@@ -27,5 +27,5 @@ export const GifGrid: FC<{ gifs: Gif[] | undefined }> = ({ gifs }) => {
         ))}
       </main>
     </section>
-  )
-}
+  );
+};

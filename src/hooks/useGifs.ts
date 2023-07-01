@@ -1,36 +1,36 @@
-import { useEffect, useState } from "react"
-import { Gif } from "../interfaces/Gif"
-import { getTrendingGifs } from "../services/getTrendingGifs"
-import { searchGif } from "../services/searchGif"
+import { useEffect, useState } from "react";
+import { Gif } from "../interfaces/Gif";
+import { getTrendingGifs } from "../services/getTrendingGifs";
+import { searchGif } from "../services/searchGif";
 
 const useGifs = () => {
-  const [gifs, setGifs] = useState<Gif[] | undefined>(undefined)
+  const [gifs, setGifs] = useState<Gif[] | undefined>(undefined);
   const [searchedText, setSearchedText] = useState<string | undefined>(
     undefined
-  )
+  );
 
   useEffect(() => {
     const OnSearch = async () => {
-      let data
-      const hasSearchedText = searchedText && searchedText.length > 0
+      let data;
+      const hasSearchedText = searchedText && searchedText.length > 0;
       if (hasSearchedText) {
-        data = await searchGif(searchedText)
+        data = await searchGif(searchedText);
       } else {
-        data = await getTrendingGifs()
+        data = await getTrendingGifs();
       }
-      setGifs(data)
-    }
-    OnSearch()
-  }, [searchedText])
+      setGifs(data);
+    };
+    OnSearch();
+  }, [searchedText]);
 
   function searchText(text: string) {
     if (searchedText !== text) {
-      setGifs(undefined)
-      setSearchedText(text)
+      setGifs(undefined);
+      setSearchedText(text);
     }
   }
 
-  return { gifs, searchText }
-}
+  return { gifs, searchText };
+};
 
-export default useGifs
+export default useGifs;
