@@ -11,7 +11,7 @@ Todos los implicados en el proyecto somos los responsables de backlog y de la pa
 
 ## Available Scripts
 
-### `npm start`
+### `npm startclear
 
 ### `npm test`
 
@@ -26,3 +26,5 @@ Todos los implicados en el proyecto somos los responsables de backlog y de la pa
 ### npx husky install
 
 ## el otro paso a tener en cuenta, modificar el script de test en el package.json para añadir al test --watchAll= false
+
+## prueba de github actions
