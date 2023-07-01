@@ -7,7 +7,7 @@ jobs:
   Check-code-status:
     runs-on: ubuntu-latest
 
-      strategy:
+    strategy:
       matrix:
         node-version: [14.x]
 
