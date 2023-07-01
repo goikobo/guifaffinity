@@ -16,3 +16,13 @@ Todos los implicados en el proyecto somos los responsables de backlog y de la pa
 ### `npm test`
 
 ### `npm run build`
+
+### integración continua, implementación: https://succulent-kryptops-a4a.notion.site/Continuous-Integration-Continuous-Delivery-Continuous-Deployment-10d287a57cd840f5be318ae64048ce9b
+
+### se siguen los pasos de instalación indicados en la página. Con las siguientes diferencias:
+
+### paso npm pkg set scripts.prepare="husky install" &&npm run prepare se sustitutye por la instalacion manual
+
+### npx husky install
+
+## el otro paso a tener en cuenta, modificar el script de test en el package.json para añadir al test --watchAll= false
