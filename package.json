@@ -26,10 +26,8 @@
     "lint-staged": "npx lint-staged"
   },
   "lint-staged": {
-    "**/*.{js,jsx,ts,tsx}": [
-      "eslint . --fix",
-      "prettier --write ."
-    ]
+    ".tsx": "prettier --write",
+    ".ts": "eslint"
   },
   "eslintConfig": {
     "extends": [
