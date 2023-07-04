@@ -7,7 +7,7 @@ export async function searchGif(searchedText: string): Promise<Gif[]> {
     searchedText
   )}&limit=50&offset=0`;
   const res = await fetch(url);
-  console.log({ res });
+
   const data: GifDTO[] = await res.json();
   return data.map(mapGuif);
 }
