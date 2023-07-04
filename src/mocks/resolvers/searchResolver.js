@@ -14,7 +14,7 @@ export const searchResolver = (request, response, context) => {
   if (searchedText === "goiko") {
     return response(context.json(goikoResp));
   }
-  console.log({ searchedText });
+
   if (searchedText === "#funny") {
     return response(context.json(funnyResp));
   }
