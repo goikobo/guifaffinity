@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
 import { Gif } from "../core/domain/Gif/Gif";
 import { GifRepository } from "../core/domain/Gif/GifRepository";
-import { gifService } from "../core/services/Gif/gifService";
 
-const useGifs = () => {
-  const _gifService: GifRepository = new gifService();
+const useGifs = (_gifService: GifRepository) => {
   const [gifs, setGifs] = useState<Gif[] | undefined>(undefined);
   const [searchedText, setSearchedText] = useState<string | undefined>(
     undefined
