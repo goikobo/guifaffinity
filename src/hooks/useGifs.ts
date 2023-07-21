@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Gif } from "../interfaces/Gif";
+import { Gif } from "../core/domain/Gif/Gif";
 import { getTrendingGifs } from "../services/getTrendingGifs";
 import { searchGif } from "../services/searchGif";
 

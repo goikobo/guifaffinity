@@ -1,6 +1,6 @@
 import { FC } from "react";
 import "./styles.css";
-import { Gif } from "../../interfaces/Gif";
+import { Gif } from "../../core/domain/Gif/Gif";
 import { GifCard } from "../GifCard/GifCard";
 import arrowIcon from "../../res/icons/arrow.svg";
 

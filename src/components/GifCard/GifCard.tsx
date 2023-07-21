@@ -1,6 +1,6 @@
 import { FC } from "react";
 import "./styles.css";
-import { Gif } from "../../interfaces/Gif";
+import { Gif } from "../../core/domain/Gif/Gif";
 
 export const GifCard: FC<{ trendingGif: Gif }> = ({ trendingGif }) => {
   return (

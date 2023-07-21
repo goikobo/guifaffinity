@@ -1,5 +1,5 @@
-import { GifDTO } from "../interfaces/DTO/GifDTO";
-import { Gif } from "../interfaces/Gif";
+import { GifDTO } from "../core/domain/Gif/GifDTO";
+import { Gif } from "../core/domain/Gif/Gif";
 
 export async function getTrendingGifs(): Promise<Gif[]> {
   const apiUrl = process.env.REACT_APP_API_URL;
