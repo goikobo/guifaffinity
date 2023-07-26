@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import "./App.css";
 import { Home } from "./pages/Home/Home";
+import { GifDetail } from "./pages/GifDetail/GifDetail";
 
 function App() {
   return (
@@ -11,16 +12,6 @@ function App() {
           <Route path="/detail/:id" element={<GifDetail />} />
         </Routes>
       </BrowserRouter>
-    </div>
-  );
-}
-
-function GifDetail() {
-  let { id } = useParams();
-
-  return (
-    <div>
-      <h3>ID: {id}</h3>
     </div>
   );
 }
