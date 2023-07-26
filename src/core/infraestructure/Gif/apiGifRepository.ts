@@ -20,4 +20,15 @@ export const apiGifRepository: GifRepository = {
     const data: GifDTO[] = await res.json();
     return data.map(mapGuif);
   },
+  getById: async (id: string): Promise<Gif | undefined> => {
+    const apiUrl = process.env.REACT_APP_API_URL;
+    const url = `${apiUrl}/gifs/getById?id=${encodeURIComponent(id)}`;
+    const res = await fetch(url);
+    if (res.status === 404) return undefined;
+
+    const data: GifDTO = await res.json();
+    if (!data) return undefined;
+
+    return mapGuif(data);
+  },
 };

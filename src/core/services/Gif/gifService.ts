@@ -9,5 +9,8 @@ export const gifService = (gifRepository: GifRepository) => {
     search: async (searchedText: string): Promise<Gif[]> => {
       return gifRepository.search(searchedText);
     },
+    getById: async (id: string): Promise<Gif | undefined> => {
+      return gifRepository.getById(id);
+    },
   };
 };
