@@ -4,12 +4,16 @@ import { Home } from "./pages/Home/Home";
 import { GifDetail } from "./pages/GifDetail/GifDetail";
 import { GifRepository } from "./core/domain/Gif/GifRepository";
 import { apiGifRepository } from "./core/infraestructure/Gif/apiGifRepository";
+import { Title } from "./components/Title/Title";
 
 const gifRepository: GifRepository = apiGifRepository;
 
 function App() {
   return (
     <div className="App">
+      <header>
+        <Title />
+      </header>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home gifRepository={gifRepository} />} />
@@ -21,6 +25,7 @@ function App() {
           <Route path="*" element={<p>404. Page not found</p>} />
         </Routes>
       </BrowserRouter>
+      <footer></footer>
     </div>
   );
 }

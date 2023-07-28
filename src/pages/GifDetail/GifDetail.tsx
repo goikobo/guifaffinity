@@ -12,15 +12,11 @@ export const GifDetail: FC<{ gifRepository: GifRepository }> = ({
 
   return (
     <>
-      <header>
-        <h1>Detalle</h1>
-      </header>
       <main>
         <div>
           <h3>ID: {gif?.id}</h3>
         </div>
       </main>
-      <footer></footer>
     </>
   );
 };
