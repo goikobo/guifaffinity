@@ -1,3 +1,8 @@
 .author {
   font-weight: bold;
 }
+
+.gif-container {
+  margin-top: 2rem;
+  max-width: 400px;
+}
