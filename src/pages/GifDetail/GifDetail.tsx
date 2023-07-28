@@ -14,7 +14,10 @@ export const GifDetail: FC<{ gifRepository: GifRepository }> = ({
     <>
       <main>
         <div>
-          <h3>ID: {gif?.id}</h3>
+          <h2>
+            {gif?.title.split(" by ")[0]}
+            <span className="author"> by {gif?.user.display_name}</span>
+          </h2>
         </div>
       </main>
     </>
