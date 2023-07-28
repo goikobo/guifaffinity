@@ -1,7 +1,7 @@
 import { Gif } from "../../domain/Gif/Gif";
 import { GifDTO } from "./GifDTO";
 
-export const mapGuif = (gif: GifDTO): Gif => {
+const mapGuif = (gif: GifDTO): Gif => {
   return {
     id: gif.id,
     title: gif.title,
@@ -19,3 +19,4 @@ export const mapGuif = (gif: GifDTO): Gif => {
     },
   };
 };
+export const apiGuifRepositoryMapper = { mapGuif };
