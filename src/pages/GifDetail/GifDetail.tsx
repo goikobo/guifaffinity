@@ -1,14 +1,14 @@
-import { FC, useRef } from "react";
+import { FC } from "react";
 import "./styles.css";
 import { useParams } from "react-router-dom";
-import { gifService } from "../../core/services/Gif/gifService";
 import useGif from "../../hooks/useGif";
-import { apiGifRepository } from "../../core/infraestructure/Gif/apiGifRepository";
+import { GifRepository } from "../../core/domain/Gif/GifRepository";
 
-export const GifDetail: FC = () => {
+export const GifDetail: FC<{ gifRepository: GifRepository }> = ({
+  gifRepository,
+}) => {
   const { id } = useParams();
-  const _gifService = useRef(gifService(apiGifRepository));
-  const { gif } = useGif(_gifService.current, id);
+  const { gif } = useGif(gifRepository, id);
 
   return (
     <>

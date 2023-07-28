@@ -4,12 +4,12 @@ import "./styles.css";
 import { GifGrid } from "../../components/GifGrid/GifGrid";
 import { SearchBar } from "../../components/SearchBar/SearchBar";
 import { Title } from "../../components/Title/Title";
-import { gifService } from "../../core/services/Gif/gifService";
-import { apiGifRepository } from "../../core/infraestructure/Gif/apiGifRepository";
+import { GifRepository } from "../../core/domain/Gif/GifRepository";
 
-export const Home: FC = () => {
-  const _gifService = useRef(gifService(apiGifRepository));
-  const { gifs, searchText } = useGifs(_gifService.current);
+export const Home: FC<{ gifRepository: GifRepository }> = ({
+  gifRepository,
+}) => {
+  const { gifs, searchText } = useGifs(gifRepository);
 
   return (
     <>

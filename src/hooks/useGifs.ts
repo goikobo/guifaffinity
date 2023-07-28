@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { Gif } from "../core/domain/Gif/Gif";
 import { GifRepository } from "../core/domain/Gif/GifRepository";
+import { gifService } from "../core/services/Gif/gifService";
 
-const useGifs = (_gifRepository: GifRepository) => {
+const useGifs = (gifRepository: GifRepository) => {
   const [gifs, setGifs] = useState<Gif[] | undefined>(undefined);
   const [searchedText, setSearchedText] = useState<string | undefined>(
     undefined
@@ -13,14 +14,14 @@ const useGifs = (_gifRepository: GifRepository) => {
       let data;
       const hasSearchedText = searchedText && searchedText.length > 0;
       if (hasSearchedText) {
-        data = await _gifRepository.search(searchedText);
+        data = await gifService(gifRepository).search(searchedText);
       } else {
-        data = await _gifRepository.getTrending();
+        data = await gifService(gifRepository).getTrending();
       }
       setGifs(data);
     };
     OnSearch();
-  }, [_gifRepository, searchedText]);
+  }, [gifRepository, searchedText]);
 
   function searchText(text: string) {
     if (searchedText !== text) {
