@@ -11,10 +11,10 @@ const gifRepository: GifRepository = apiGifRepository;
 function App() {
   return (
     <div className="App">
-      <header>
-        <Title />
-      </header>
       <BrowserRouter>
+        <header>
+          <Title />
+        </header>
         <Routes>
           <Route path="/" element={<Home gifRepository={gifRepository} />} />
           <Route
@@ -24,8 +24,8 @@ function App() {
 
           <Route path="*" element={<p>404. Page not found</p>} />
         </Routes>
+        <footer></footer>
       </BrowserRouter>
-      <footer></footer>
     </div>
   );
 }
