@@ -3,6 +3,7 @@ import "./styles.css";
 import { Gif } from "../../core/domain/Gif/Gif";
 import { GifCard } from "../GifCard/GifCard";
 import arrowIcon from "../../res/icons/arrow.svg";
+import { Link } from "react-router-dom";
 
 export const GifGrid: FC<{ gifs: Gif[] | undefined }> = ({ gifs }) => {
   const isLoading = gifs === undefined;
@@ -23,7 +24,9 @@ export const GifGrid: FC<{ gifs: Gif[] | undefined }> = ({ gifs }) => {
       </header>
       <main className="grid">
         {gifs.map((trendingGif) => (
-          <GifCard key={trendingGif.id} trendingGif={trendingGif} />
+          <Link to={"/detail/" + trendingGif.id}>
+            <GifCard key={trendingGif.id} trendingGif={trendingGif} />
+          </Link>
         ))}
       </main>
     </section>
