@@ -1,7 +1,7 @@
 import { Gif } from "../../domain/Gif/Gif";
-import { GifDTO } from "../../domain/Gif/GifDTO";
+import { GifDTO } from "./GifDTO";
 import { GifRepository } from "../../domain/Gif/GifRepository";
-import { mapGuif } from "../../services/Gif/Serializers/mapGuif";
+import { mapGuif } from "./mapGuif";
 
 export const apiGifRepository: GifRepository = {
   getTrending: async (): Promise<Gif[]> => {

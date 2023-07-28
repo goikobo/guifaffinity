@@ -1,5 +1,5 @@
-import { Gif } from "../../../domain/Gif/Gif";
-import { GifDTO } from "../../../domain/Gif/GifDTO";
+import { Gif } from "../../domain/Gif/Gif";
+import { GifDTO } from "./GifDTO";
 
 export const mapGuif = (gif: GifDTO): Gif => {
   return {
