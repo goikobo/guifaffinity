@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, useRef } from "react";
 import useGifs from "../../hooks/useGifs";
 import "./styles.css";
 import { GifGrid } from "../../components/GifGrid/GifGrid";
@@ -8,7 +8,8 @@ import { gifService } from "../../core/services/Gif/gifService";
 import { apiGifRepository } from "../../core/infraestructure/Gif/apiGifRepository";
 
 export const Home: FC = () => {
-  const { gifs, searchText } = useGifs(gifService(apiGifRepository));
+  const _gifService = useRef(gifService(apiGifRepository));
+  const { gifs, searchText } = useGifs(_gifService.current);
 
   return (
     <>
