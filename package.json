@@ -19,7 +19,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "start-api": "set \"REACT_APP_USE_REMOTE_API=true\" && react-scripts start",
+    "start-mock": "set \"REACT_APP_USE_MOCK_API=true\" && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --watchAll=false",
     "test:dev": "react-scripts test",
