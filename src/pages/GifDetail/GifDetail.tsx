@@ -22,7 +22,7 @@ export const GifDetail: FC<{ gifRepository: GifRepository }> = ({
             {gif?.title.split(" by ")[0]}
             <span className="author"> by {gif.user.display_name}</span>
           </h2>
-          <section className="gif-container">
+          <section className="single-gif-container">
             <GifCard trendingGif={gif}></GifCard>
           </section>
           <section className="user-and-tags">
