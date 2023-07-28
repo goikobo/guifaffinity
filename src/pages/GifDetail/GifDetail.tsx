@@ -25,6 +25,14 @@ export const GifDetail: FC<{ gifRepository: GifRepository }> = ({
           <section className="gif-container">
             <GifCard trendingGif={gif}></GifCard>
           </section>
+          <section className="user-and-tags">
+            <h3>{gif.user.display_name}</h3>
+            <section className="tags-list">
+              {gif.tags.map((tag) => (
+                <div className="tag">{tag}</div>
+              ))}
+            </section>
+          </section>
         </div>
       </main>
     </>

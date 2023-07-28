@@ -6,3 +6,16 @@
   margin-top: 2rem;
   max-width: 400px;
 }
+
+.tags-list {
+  display: flex;
+  font-weight: 600;
+}
+
+.tag {
+  color: var(--color-White);
+  background-color: var(--color-tag);
+  padding: 0.4rem 0.7rem;
+  margin: 0.2rem;
+  border-radius: 1rem;
+}
